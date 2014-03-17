@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZuluTradeRestApi", "..\ZuluTradeRestApi\ZuluTradeRestApi.csproj", "{9A1ABC43-9960-4285-ADAA-FEC786890ECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestZulutradeApi", "..\TestZulutradeApi\TestZulutradeApi.csproj", "{01BA5854-2D4C-4E11-B435-2AB06B5DFD4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingBackBone", "..\TradingBackBone\TradingBackBone.csproj", "{2B643F43-1A59-4301-89C1-05CD073B02CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A1ABC43-9960-4285-ADAA-FEC786890ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1ABC43-9960-4285-ADAA-FEC786890ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1ABC43-9960-4285-ADAA-FEC786890ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1ABC43-9960-4285-ADAA-FEC786890ECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BA5854-2D4C-4E11-B435-2AB06B5DFD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BA5854-2D4C-4E11-B435-2AB06B5DFD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BA5854-2D4C-4E11-B435-2AB06B5DFD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BA5854-2D4C-4E11-B435-2AB06B5DFD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B643F43-1A59-4301-89C1-05CD073B02CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B643F43-1A59-4301-89C1-05CD073B02CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B643F43-1A59-4301-89C1-05CD073B02CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B643F43-1A59-4301-89C1-05CD073B02CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

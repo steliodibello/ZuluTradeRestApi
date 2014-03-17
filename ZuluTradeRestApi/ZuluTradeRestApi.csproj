@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A1ABC43-9960-4285-ADAA-FEC786890ECF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZuluTradeRestApi</RootNamespace>
+    <AssemblyName>ZuluTradeRestApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\TradePlatform.MT4.Demo\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\CloseMarket\CloseMarket.cs" />
+    <Compile Include="Command\CloseMarket\CloseMarketRequest.cs" />
+    <Compile Include="Command\CloseMarket\CloseMarketResponse.cs" />
+    <Compile Include="Command\CloseMarket\ICloseMarket.cs" />
+    <Compile Include="Command\CloseMarket\JsonCloseTradeResult.cs" />
+    <Compile Include="Command\ClosePending\ClosePending.cs" />
+    <Compile Include="Command\ClosePending\ClosePendingRequest.cs" />
+    <Compile Include="Command\ClosePending\ClosePendingResponse.cs" />
+    <Compile Include="Command\ClosePending\IClosePending.cs" />
+    <Compile Include="Command\OpenMarket\IOpenMarket.cs" />
+    <Compile Include="Command\UpdateEntry\IUpdateEntry.cs" />
+    <Compile Include="Command\UpdateEntry\UpdateEntry.cs" />
+    <Compile Include="Command\UpdateEntry\UpdateEntryRequest.cs" />
+    <Compile Include="Command\UpdateEntry\UpdateEntryResponse.cs" />
+    <Compile Include="Command\UpdateLimit\IUpdateLimit.cs" />
+    <Compile Include="Command\UpdateLimit\UpdateLimit.cs" />
+    <Compile Include="Command\UpdateLimit\UpdateLimitRequest.cs" />
+    <Compile Include="Command\UpdateLimit\UpdateLimitResponse.cs" />
+    <Compile Include="Command\UpdateStop\IUpdateStop.cs" />
+    <Compile Include="Command\UpdateStop\UpdateStop.cs" />
+    <Compile Include="Command\UpdateStop\UpdateStopRequest.cs" />
+    <Compile Include="Command\UpdateStop\UpdateStopResponse.cs" />
+    <Compile Include="Common\JsonTradeResult.cs" />
+    <Compile Include="Command\OpenMarket\OpenMarketRequest.cs" />
+    <Compile Include="Command\OpenMarket\OpenMarketResponse.cs" />
+    <Compile Include="Command\OpenPending\IOpenPending.cs" />
+    <Compile Include="Command\OpenPending\OpenPending.cs" />
+    <Compile Include="Command\OpenMarket\OpenMarket.cs" />
+    <Compile Include="Command\OpenPending\OpenPendingRequest.cs" />
+    <Compile Include="Command\OpenPending\OpenPendingResponse.cs" />
+    <Compile Include="Common\TradeCommands.cs" />
+    <Compile Include="Common\TradeRequestBase.cs" />
+    <Compile Include="Common\TradeResponseBase.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\GetOpenTrades\GetOpenTrades.cs" />
+    <Compile Include="Query\GetOpenTrades\GetOpenTradesRequest.cs" />
+    <Compile Include="Query\GetOpenTrades\GetOpenTradesResponse.cs" />
+    <Compile Include="Query\GetOpenTrades\IGetOpenTrades.cs" />
+    <Compile Include="Query\GetOpenTrades\OpenPosition.cs" />
+    <Compile Include="Query\GetOpenTrades\ZulutradeResponse.cs" />
+    <Compile Include="WebApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TradingBackBone\TradingBackBone.csproj">
+      <Project>{2b643f43-1a59-4301-89c1-05cd073b02ce}</Project>
+      <Name>TradingBackBone</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
